@@ -93,7 +93,7 @@ html, body{
   display: table-cell;
   vertical-align: middle;       
   text-align: center;           
-  padding: 8px;
+  padding: 0px;
 }
 .menu h2{ font-size: 30px; margin-bottom: .5rem; }
 .menu ul{ list-style: none; margin: 0 auto; padding: 0; width: 560px; }
@@ -131,7 +131,7 @@ html, body{
   margin-right: var(--colR);
   background: #ffffff;
   text-align: left;
-  min-height: 790px;
+  min-height: 755px;
 }
 .block5 img{
   float: right;

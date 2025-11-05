@@ -9,9 +9,7 @@
   --colL: 28.5714%;
   --colM: 47.6190%;
   --colR: 23.8096%;
-  --hQuote: px;
   --vFree: calc(100vh - var(--hHeader) - var(--hFooter) - 4*var(--gap) - 2*var(--pad));
-  
 }
 
 html, body{
@@ -26,8 +24,7 @@ html, body{
 
 .container{
   min-height: 100vh;
-  min-width: 1250px;
-  width: max(1250px, 100%);
+  width: 100%;
   padding: var(--pad);
 }
 
@@ -84,19 +81,24 @@ html, body{
   width: calc(var(--colR) - var(--gap));
   background: #e3efd9;
   margin-right: 0px;;
-  
-  min-height: calc(max(120px, var(--vFree)) + 207px);
-  
-  display: table;
+  height: 870px;
+  display: table; /* enable vertical centering without flex/grid */
 }
 .block2 .menu{
   display: table-cell;
-  vertical-align: middle;       
-  text-align: center;           
+  vertical-align: middle;
+  text-align: center;
   padding: 0px;
 }
 .menu h2{ font-size: 30px; margin-bottom: .5rem; }
-.menu ul{ list-style: none; margin: 0 auto; padding: 0; width: 560px; }
+.menu ul{ 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  width: 400px; 
+  display: inline-block; /* center the list horizontally */
+  text-align: left;      /* keep link text left-aligned */
+}
 .menu li + li{ margin-top: .35rem; }
 .menu a{
   display: block; text-decoration: none; color: #1f2937;
@@ -111,7 +113,7 @@ html, body{
   width: calc(var(--colL) - var(--gap));
   background: #fbe3d1;
   text-align: left;                              
-  min-height: calc(max(120px, var(--vFree)) + 20px);         
+  height: 680px;
 }
 
 .block4{
@@ -120,7 +122,7 @@ html, body{
   margin-right: var(--colR);
   background: #fbe3d1;
   text-align: left;
-  min-height: var(--hQuote);                      
+                      
 }
 .block4 h2{ font-size:clamp(18px,2vw,24px); margin:.25rem 0 .5rem; text-align:center; }
 
@@ -131,7 +133,7 @@ html, body{
   margin-right: var(--colR);
   background: #ffffff;
   text-align: left;
-  min-height: 755px;
+  
 }
 .block5 img{
   float: right;
